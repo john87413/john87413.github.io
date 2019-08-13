@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html,body{scroll-behavior: smooth} */
+
+a, a:link, a:visited{
+    text-decoration: none ;
+    color: #000 ;
+    cursor: pointer;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    background: #00000000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* flex介紹
+    justify-content :主軸對齊 主軸是哪個方位要看flex-direction
+    align-items     :交錯軸對齊 一樣要看flex-direction
+*/
+header{
+    display: flex ;
+    justify-content: space-between ;
+    background: #fff ;
+    height: 60px;
+    min-height: 3.5vw ;
+    box-shadow:1px 1px 3px rgba(20%,20%,40%,0.5) ;
+    z-index: 2;
+}
+/* main 區域 */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    background: #fff;
+}
+
+nav{
+    max-height: 95vh ;
+    margin-top: 60px;
+    z-index: 0;
+}
+
+/* aside{ */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background: #26de81; */
+/* } */
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    25% {opacity: 0.1;}
+    35% {opacity: 0.2;}
+    45% {opacity: 0.3;}
+    55% {opacity: 0.4;}
+    65% {opacity: 0.5;}
+    75% {opacity: 0.6;}
+    85% {opacity: 0.7;}
+    100% {opacity: 0.8;}
+}
+@keyframes bump-in {
+    from {width: 0%;height: 0%;}
+    to {width: 20%;height: 20%;}
+}
+@keyframes left-in {
+    from {left: -35vw;}
+    to {left: 0;}
+}
+@keyframes left-out {
+    from {left: 0;}
+    to {left: -35vw;}
+}
+@keyframes color-green-out {
+    from {color: rgb(0,0,0);}
+    to {color: rgb(144,238,144);}
+}
+
+@keyframes rotate-in{
+    from {transform:rotate(0deg);}
+    to {transform:rotate(-50deg);}
+}
+
+@keyframes rotate-in-img{
+    from {transform:rotate(0deg);}
+    to {transform:rotate(50deg);}
+}
+
+@keyframes rotate-back{
+    from {transform:rotate(-50deg);}
+    to {transform:rotate(0deg);}
+}
+
+@keyframes rotate-back-img{
+    from {transform:rotate(50deg);}
+    to {transform:rotate(0deg);}
+}
+@keyframes show-background {
+    from {
+        opacity: 0;
+        transform: translate(0%, 85%);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes change-color {
+    from {
+        background: rgb(230,230,250);
+    }
+    to {
+        background: rgb(240,248,255);
+    }
+}
+/* main > * , header, footer{
+    margin: 4px;
+    padding: 5px;
+    border-radius: 7px;
+} */
+@media all and (max-width: 1180px){
+    header{
+        height: 4.8vw ;
+        max-height: 6vw ;
+    }
+    nav{
+        margin-top: 4.8vw ;
+    }
+}
+
